@@ -34,5 +34,9 @@ for TARGET_ARCH in arm arm64 x86 x86_64 mips mips64; do
   done;
 done;
 
+for i in obj/local/*/*.a; do
+  ln -rs $i ${i/_static/};
+done;
+
 exit 0;
 
