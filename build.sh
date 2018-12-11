@@ -12,7 +12,7 @@ case $1 in
 esac;
 
 if [ ! "$NDK_ROOT" ]; then
-  NDK_ROOT=~/android/android-ndk-r*;
+  NDK_ROOT=$(echo ~/android/android-ndk-r* | cut -d\  -f1);
 fi;
 
 for TARGET_ARCH in arm arm64 x86 x86_64 mips mips64; do
